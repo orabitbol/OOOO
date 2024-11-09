@@ -42,6 +42,7 @@ const Employees: React.FC = () => {
       setEmployees(response);
     } catch (error) {
       console.error("Failed to update status:", error);
+      setErrorMessage("Failed to update status.");
     }
   };
 
