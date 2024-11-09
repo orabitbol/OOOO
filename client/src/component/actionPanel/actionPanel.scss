@@ -1,0 +1,86 @@
+@use "../../styles/colors";
+.action-panel-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+
+  .container {
+    display: flex;
+    text-align: center;
+    flex: 1;
+    .create-button {
+      background-color: colors.$primary-blue;
+      color: colors.$text-color;
+      padding: 8px 16px;
+      border-radius: 3px;
+      margin-right: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+
+      .icon-plus {
+        margin-left: 6px;
+        font-size: 20px;
+      }
+    }
+
+    .search-filter-group {
+      display: flex;
+      align-items: center;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color:colors.$text-color;
+      flex: 1;
+
+      .search {
+        flex: 1;
+
+        .MuiOutlinedInput-root {
+          border-radius: 0;
+          padding-left: 0;
+          background-color: colors.$text-color;
+          border: none;
+        }
+
+        .MuiInputAdornment-root {
+          color: colors.$light-gray;
+          margin-left: 6px;
+        }
+
+        fieldset.MuiOutlinedInput-notchedOutline {
+          border: none;
+        }
+      }
+      .divider {
+        width: 1px;
+        height: 30px;
+        background-color: colors.$divider-gray;
+      }
+
+      .select-status {
+        min-width: 180px;
+        background-color: colors.$text-color;
+        .label-status{
+          color: "#8c8c8c"
+        }
+
+        .MuiOutlinedInput-root {
+          border-radius: 0;
+          background-color: colors.$text-color;
+          border: none;
+        }
+
+        .MuiOutlinedInput-notchedOutline {
+          border: none;
+        }
+
+        .status-select .placeholder {
+          color: colors.$light-gray;
+        }
+      }
+    }
+  }
+}

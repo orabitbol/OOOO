@@ -1,0 +1,27 @@
+@use "../../styles/colors";
+.header-component {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+
+  .title {
+    margin: 10px;
+    color: #33aaf3;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+
+  .logout-button {
+    margin: 10px;
+    color: colors.$primary-blue;;
+    border: 1px solid #33aaf3;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 5px 15px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}

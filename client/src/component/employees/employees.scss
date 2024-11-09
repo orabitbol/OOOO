@@ -1,0 +1,18 @@
+.employee-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px 115px;
+  .wrapper-action-panel {
+    display: flex;
+    justify-content: center;
+  }
+  .wrapper-employee-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    gap: 20px;
+    padding: 20px 0px;
+  }
+}

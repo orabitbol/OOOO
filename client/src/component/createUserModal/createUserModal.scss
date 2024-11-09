@@ -1,0 +1,35 @@
+@use "../../styles/colors";
+.create-user-modal-component {
+  .title {
+    padding: 16px 40px;
+    font-weight: 600;
+  }
+  .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiDialog-paperFullWidth {
+    width: 450px;
+    height: 350px;
+  }
+  .MuiDialogContent-root {
+    padding: 15px 40px;
+    gap: 14px;
+    display: flex;
+    flex-direction: column;
+  }
+  .MuiFormControl-root {
+    margin: 0;
+  }
+  .position-button {
+    display: flex;
+    justify-content: start;
+    margin-top: 50px;
+    padding: 0;
+    .create-button {
+      background-color: colors.$button-blue;
+      color: white;
+      font-size: 14px;
+    }
+    .cancel-button {
+      border: none;
+      color: colors.$cancel-button-color;;
+    }
+  }
+}

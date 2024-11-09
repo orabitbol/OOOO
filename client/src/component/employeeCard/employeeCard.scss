@@ -1,0 +1,60 @@
+@use "../../styles/colors";
+.employee-card {
+  text-align: center;
+  min-width: 345px;
+  max-width: 345px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  &:hover {
+    box-shadow: 0 8px 20px rgb(202 229 246);
+  }
+  .employee-avatar {
+    width: 130px;
+    height: 140px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 16px;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    margin: 60px 0px 0px 14px;
+    .card-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: colors.$header-title-color;
+      display: flex;
+    }
+  }
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 8px;
+  display: inline-block;
+  position: relative;
+  top: -1px;
+
+  &[data-status="Working"] {
+    background-color:colors.$status-working;
+  }
+  &[data-status="On Vacation"] {
+    background-color:colors.$status-on-vacation;
+  }
+  &[data-status="Business Trip"] {
+    background-color: colors.$status-business-trip;
+  }
+  &[data-status="LunchTime"] {
+    background-color:colors.$status-lunchtime;
+  }
+  &[data-status="default"] {
+    background-color: colors.$status-default;
+  }
+}
