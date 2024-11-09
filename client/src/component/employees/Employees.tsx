@@ -18,11 +18,18 @@ const Employees: React.FC = () => {
   const [selectedStatus, setSelectedStatus] = useState("");
   const [employees, setEmployees] = useState<IEmployee[]>([]);
   const [statusOptions, setStatusOptions] = useState<string[]>([]);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const fetchData = async () => {
-    const data = await fetchEmployees();
-    setEmployees(data);
-    setStatusOptions(DEFAULT_STATUS_OPTIONS);
+    try {
+      const data = await fetchEmployees();
+      setEmployees(data);
+      setStatusOptions(DEFAULT_STATUS_OPTIONS);
+      setErrorMessage(null); 
+    } catch (error) {
+      console.error("Failed to fetch employees:", error);
+      setErrorMessage("The server is down.");
+    }
   };
 
   useEffect(() => {
@@ -59,16 +66,20 @@ const Employees: React.FC = () => {
             statusOptions={statusOptions}
           />
         </div>
-        <div className="wrapper-employee-card">
-          {filteredEmployees.map((employee) => (
-            <EmployeeCard
-              key={employee.id}
-              employee={employee}
-              onStatusChange={handleStatusChange}
-              statusOptions={statusOptions}
-            />
-          ))}
-        </div>
+        {errorMessage ? (
+          <div className="error-message">{errorMessage}</div>
+        ) : (
+          <div className="wrapper-employee-card">
+            {filteredEmployees.map((employee) => (
+              <EmployeeCard
+                key={employee.id}
+                employee={employee}
+                onStatusChange={handleStatusChange}
+                statusOptions={statusOptions}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </>
   );
