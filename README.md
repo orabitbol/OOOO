@@ -31,8 +31,7 @@ The project is organized into separate components to keep the code modular and m
    ```bash
    git clone https://github.com/orabitbol/OX.git
    cd OX
-
-
+   ```
 
 2. **Install Dependencies Backend**:
 
