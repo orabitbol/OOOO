@@ -17,7 +17,7 @@
    
    
 
-3. **Start the Application**:
+3. **Install and Start the Application**:
 
    ```cd client
    npm install -> npm run dev
