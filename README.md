@@ -11,16 +11,16 @@
 2. **Install Dependencies Backend**:
 
    ```cd server
-   npm install
+   npm install ->  npm start
    ```
-   npm start
+
    
    
 
 3. **Start the Application**:
 
    ```cd client
-   npm run dev
+   npm install -> npm run dev
    ```
 
 4. **Open the Application**:
